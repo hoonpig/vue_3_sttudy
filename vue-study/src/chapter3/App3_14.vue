@@ -17,7 +17,7 @@ import {ref, createApp} from 'vue';
  })
 
  app.config.globalProperties.title = 'Vue 3 Demo';
- app.provide('counter_header' , 'Counter');
+ app.provide('counter_header' , 'Counter ');
  app.mount('#app');
 
 

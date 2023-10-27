@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+  </head>
+  <body>
+    <template>
+        <p> {{ `[${msg}` }}</p>
+        <Component v-model:msg="msg" v-model:msg2="msg2" />
+    </template>
+
+  </body>
+<script>
+
+import Component from 'Component.vue';
+
+export default {
+  data(){
+    return {
+      msg : '초기 메세지'
+      , msg2 : '초기 메세지2'
+    }
+  },
+  components : {
+    Component
+  }
+}
+
+</script>
+</html>
