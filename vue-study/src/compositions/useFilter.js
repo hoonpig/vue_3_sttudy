@@ -10,7 +10,7 @@ export const useFilter = () =>{
         else return a.id - b.id;
     }
 
-    const getPadingTodos = (todos) =>{
+    const getPendingTodos = (todos) =>{
         return todos.value.filter((todo) => todo.date < today && !todo.completed).slice().sort(fnSort);
     }
 
@@ -18,12 +18,12 @@ export const useFilter = () =>{
         return todos.value.filter((todo) => todo.date == today && !todo.completed).slice().sort(fnSort);
     }
 
-    const getCompleteTodayTodos = (todos) =>{
+    const getCompletedTodayTodos = (todos) =>{
         return todos.value.filter((todo) => todo.date == today && today && todo.completed).slice().sort(fnSort);
     }
 
     const getAllTodayTodos = (todos) =>{
-        return getActiveTodayTodos(todos).concat(getCompleteTodayTodos(todos)).slice().sort(fnSort);
+        return getActiveTodayTodos(todos).concat(getCompletedTodayTodos(todos)).slice().sort(fnSort);
     }
 
     const getAllTodos = (todos) => {
@@ -31,9 +31,9 @@ export const useFilter = () =>{
     }
 
     return {
-        getPadingTodos
+        getPendingTodos
         , getActiveTodayTodos
-        , getCompleteTodayTodos
+        , getCompletedTodayTodos
         , getAllTodayTodos
         , getAllTodos
     }

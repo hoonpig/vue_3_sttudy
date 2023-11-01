@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div v-for="(todo, index) in data" :key="todo.id">
+        <div v-for="(todo, idx) in data" :key="todo.id">
             <div class="input-group my-2 input-group-sm">
                 <div class="input-group-text">
                     <input
